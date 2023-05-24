@@ -1,0 +1,55 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.container{
+			width: 90vw;
+			height: 500px;
+			border: 1px solid black;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;  /*this is used along css axis*/ 
+			flex-wrap: wrap;    /*this to make ypur page responsive it will take the item to next line if shrink*/
+			align-content: flex-start;  /*it is for cross axis and used with flex-wrap*/
+		}
+		.item1{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			/*align-self: flex-start; it is for this class only to align in cross axis*/
+			order: 0;  /*the class which has high order value comes in end*/
+			/*flex-grow: 1; it will take the whole space available to it abd fill the whole row or column except other item*/
+		}
+		.item2{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+/*			flex-grow: 2; it will take the space twice than item1 but both will stretch to blank space*/
+			/*flex-shrink: 1; this is used when the viewport is shrinked*/
+			/*flex-basis: 50%;  this is like width or row value according to flex direction*/
+			/*flex: flex-grow-value flex-shrink-value flex-basis-value;*/
+
+		}
+		.item3{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}		
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>flex box</title>
+</head>
+<body>
+	<div class="container">
+		<div class="item1"></div>
+		<div class="item2"></div>
+		<div class="item3"></div>
+	</div>
+	<div class="a">
+		<div class="b"></div>
+	</div>
+</body>
+</html>
+<!-- ctrl + shift + b to create css -->

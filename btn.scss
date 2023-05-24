@@ -1,0 +1,225 @@
+.btn{
+	&:link,
+	&:visited{
+		width: 22rem;
+		display: block;
+		text-transform: uppercase;
+		color: var(--color-primary);
+		background-color: #fff;
+		text-decoration: none;
+		padding: 1.6rem;
+		font-weight: 500;
+		background-size:250%;
+		background-image:linear-gradient(120deg, transparent 0%,transparent 50%, var(--color-primary) 50%);
+		transition: all 0.4s;
+	}
+	&:hover,
+	&:active{
+		background-position:100%;
+		color: var(--color-white);
+		transform: translateX(1rem);
+	}
+
+}
+
+
+.section-services, .section-team, .section-portfolio, .section-testimonials{
+	background-color:white;
+	text-align: center;
+	padding-bottom:8rem;
+}
+.section-team{
+	background-color:var(--color-black);
+}
+.section__header h2{
+	color: var(--color-primary);
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	margin-bottom: 1.2rem;
+}
+.section__header h1{
+	color: var(--color-darkgrey);
+	font-size: 4.8rem;
+	text-transform: capitalize;
+	margin-bottom: 2.4rem;
+}
+.services{
+	display: flex;
+	margin: 0 6rem;
+	flex-wrap: wrap;
+}
+.service__box{
+	background-color:var(--color-lightgrey);
+	width: 20rem;
+	// height: 7rem;
+	margin: 1.5rem;
+	flex: 1 1 30%;
+	display: flex;
+	align-items:center;
+	justify-content: flex-start;
+	overflow: hidden;
+	&__title{
+		color: black;
+		font-size: 2.3rem;
+		font-weight: 500;
+		padding:3rem 6rem 3rem 0;
+		transform: translate(-1.6rem);
+		transition: all .5s;
+
+	}
+	&:hover{
+		background-color:var(--color-primary);
+
+	}
+	&__icon{
+		height: 11rem;
+		width: 4.8rem;
+		fill: var(--color-primary-light);
+		opacity: 0;
+		transform: scale(0.5);
+		transition: all .5s;
+	}
+	&:hover &__title{
+		color:var(--color-white);
+		transform: translate(3rem);
+		
+	}
+	&:hover &__icon{
+		opacity: 0.6;
+		transform: scale(1.4);
+		
+	}
+}
+
+.team-mates{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.team-mate {
+	border-radius: 50%;
+	border:3px solid var(--color-primary);
+	width: 24rem;
+	height: 24rem;
+	background-size:cover;
+	background-position:center;
+	position:relative;
+	&--1{
+		background-image:url(team-mate-1.jpg);
+	}
+	&--2{
+		background-image:url(team-mate-2.jpg);
+	}
+	&--3{
+		background-image:url(team-mate-3.jpg);
+	}
+
+	&__overlay{
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 23.7rem;
+		height: 23.7rem;
+		border-radius:50%;
+		background-color:rgba(#ce367c,0.7);
+		opacity: 0;
+		transition: opacity 0.2s;
+	}
+	&:hover &__overlay{
+		opacity: 1;
+	}
+	&:hover &__content{
+		opacity: 1;
+		top: 50%;
+		
+	}
+	&__content{
+		color: var(--color-white);
+		position:absolute;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		opacity: 0;
+		transition: all .5s .2s;
+	}
+	&__name{
+		font-size: 2.7rem;
+		font-weight: 800;
+	}
+	&__designation{
+		font-size: 1.75rem;
+		font-weight: 400;
+	}
+}
+.social-media{
+	display: flex;
+	margin-top: 2rem;
+	justify-content: center;
+
+}
+.facebook, .twitter, .linkedin {
+	&__icon{
+		height: 3rem;
+		width: 3rem;
+		fill: var(--color-white);
+		margin: 2.6px;
+		&:hover{
+			fill: var(--color-primary-light);
+		}
+	}
+}
+
+.portfolio{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	&__column{
+		flex-basis: 30%;
+		margin: 5px;
+	}
+	&__image{
+		width: 100%;
+		margin-top: 0.5rem;
+		overflow: hidden;
+		& img{
+			width: 100%;
+			height: auto;
+			filter: saturate(0%) brightness(100%) contrast(100%);
+			transition:all 0.4s ;
+			&:hover{
+				filter: none;
+				transform: scale(1.25);
+
+			}
+		}
+	}
+}
+
+
+.container {
+	width: 30%;
+	border:2px solid yellow;
+}
+
+.testimonials-card{
+	height: 40rem;
+	width: 100%;
+	background-color:var(--color-darkgrey-2);
+	&__stars{
+		fill: var(--color-yellow);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items:center;
+	}
+	&__icon{
+		width: 1.5rem;
+		height: 1.5rem;
+		display: block;
+	}
+	&__para{
+		font-size: 1.9rem;
+		color: var(--color-lightgrey);
+		margin-top: 3rem;
+}
